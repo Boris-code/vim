@@ -1,0 +1,80 @@
+snippet fun
+	function ${1:func_name}(${2:})
+		${3:}
+	end
+snippet nfun
+	${1:func_name} = function(${2:})
+		${3:}
+	end
+snippet lamb
+	function(${1:}) ${2:} end ${3:}
+snippet wh
+	while ${1:true} do
+		${2:}
+	end
+snippet doe
+	do
+		${1:}
+	end
+snippet dre
+	do return end
+	${1}
+snippet for
+	for ${1:} do
+		${2:}
+	end
+snippet forin
+	for ${1:key} in ${2:elems} do
+		${3}
+	end
+snippet if
+	if ${1:true} then
+		${2:}
+	end
+snippet el
+	else
+		${1:}
+snippet elif
+	elseif ${1:true}
+		${2:}
+snippet req
+	require("${1:name}")${2}
+snippet as
+	assert(${1})${2}
+snippet lo
+	local 
+snippet pr
+	print(${1})${2}
+snippet fhead
+	--[[
+	Desc: ${1}
+	Auth: ${2:张宇飞}
+	Date: `strftime("%Y-%m-%d")`    
+	--]]
+	${3}
+snippet doc
+	--[[
+	@brief ${1}
+	--]]
+snippet line
+	------------------------| ${1} |------------------------${2}
+snippet coc
+	${1:co} = coroutine.create(${2})${3}
+snippet cor
+	coroutine.resume(${1:co})${2}
+snippet coy
+	coroutine.yield(${1})${2}
+snippet cos
+	coroutine.status(${1:co})${2}
+snippet cow
+	coroutine.wrap(${1})${2}
+snippet rep
+	repeat
+		${2}
+	until ${1:true}
+snippet FM
+	FIXME(zhangyufei)
+snippet TD
+	TODO(zhangyufei)
+snippet NT
+	NOTE(zhangyufei)

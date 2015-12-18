@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/xiaoyezi/Src/git/mozart/frameworks/runtime-src/proj.android/assets'
+let g:netrw_dirhist_2='/Users/xiaoyezi/Src/git/mozart/frameworks/runtime-src/proj.android/sharesdk_assets'
+let g:netrw_dirhist_3='/Users/xiaoyezi/Dev/android-sdk-macosx/build-tools'
+let g:netrw_dirhist_4='/Users/xiaoyezi/Dev/android-sdk-macosx/build-tools/android-5.1'
+let g:netrw_dirhist_5='/Users/xiaoyezi/Src/git/mozart/frameworks/runtime-src/proj.android/scripts'
+let g:netrw_dirhist_6='/Users/xiaoyezi/Src/git/mozart/src/language'

@@ -1,0 +1,202 @@
+# main()
+snippet main
+	int main(int argc, char *argv[])
+	{
+		${1}
+		return 0;
+	}
+snippet mainv
+	int main()
+	{
+		${1}
+		return 0;
+	}
+# #include <...>
+snippet inc
+	#include <${1:stdio}.h>${2}
+# #include "..."
+snippet Inc
+	#include "${1:`Filename("$1.h")`}"${2}
+# #include some std
+snippet inct
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <string.h>
+	${1}
+# #ifndef ... #define ... #endif
+snippet Def
+	#ifndef $1
+	#define ${1:SYMBOL} 		${2:value}
+	#endif${3}
+snippet def
+	#define 
+snippet ifdef
+	#ifdef ${1:FOO}
+		${2:#define }
+	#endif
+snippet #if
+	#if ${1:FOO}
+		${2}
+	#endif
+# Header Include-Guard
+snippet once
+	#ifndef ${1:__`toupper(Filename('', 'UNTITLED').'_H_')`}
+	#define $1
+
+	${2}
+
+	#endif /* end of include guard: $1 */
+snippet 1ci
+	#pragma once
+# If Condition
+snippet if
+	if (${1:/* condition */}) {
+		${2:/* code */}
+	}
+snippet el
+	else {
+		${1}
+	}
+# Tertiary conditional
+snippet t
+	${1:/* condition */} ? ${2:a} : ${3:b}
+# Do While Loop
+snippet do
+	do {
+		${2:/* code */}
+	} while (${1:/* condition */});
+# While Loop
+snippet wh
+	while (${1:/* condition */}) {
+		${2:/* code */}
+	}
+# For Loop
+snippet for
+	for (${1:i} = 0; $1 < ${2:count}; ${3:++}$1) {
+		${4:/* code */}
+	}
+# Custom For Loop
+snippet forr
+	for (${1:size_t} ${2:i} = ${3:0}; ${4:$2 < 10}; ${5:++}$2) {
+		${6:/* code */}
+	}
+# Function
+snippet fun
+	${1:void} ${2:function_name}(${3})
+	{
+		${4:/* code */}
+	}
+#static fun
+snippet sfun
+	static ${1:void} ${2:function_name}(${3})
+	{
+		${4:/* code */}
+	}
+# Function Declaration
+snippet fund
+	${1:void}			${2:function_name}(${3});${4}
+# satic fund
+snippet sfund
+	static ${1:void} 		${2:function_name}(${3});${4}
+# Typedef
+snippet td
+	typedef ${1:int} 		${2:MyCustomType};${3}
+# Struct
+snippet st
+	struct ${1} {
+		${2}
+	};${3}
+# Typedef struct
+snippet tds
+	typedef struct {
+		${2}
+	} ${1};${3}
+# Typdef enum
+snippet tde
+	typedef enum {
+		${1:/* data */}
+	} ${2:foo};
+# printf
+# unfortunately version this isn't as nice as TextMates's, given the lack of a
+# dynamic `...`
+snippet pr
+	printf("${1:%s}\n"${2});${3}
+# fprintf (again, this isn't as nice as TextMate's version, but it works)
+snippet fpr
+	fprintf(${1:stderr}, "${2:%s}\n"${3});${4}
+snippet .
+	[${1}]${2}
+snippet un
+	unsigned
+snippet {
+	{
+		${1}
+	}
+snippet sw
+	switch (${1:a}) {
+	case ${2:0}:
+		 ${3:/*code here*/}
+		break;
+	}
+snippet dox
+	/**
+	 * @brief ${1}
+	 */${2}
+snippet doxr
+	/**
+	 * @brief ${1}
+	 * @return ${2}
+	 */${3}
+snippet @p
+	@param 
+
+snippet line
+	/*********************| ${1} |*********************/${2}
+snippet cpp
+	#ifdef __cplusplus
+	extern "C" {
+	#endif
+
+	${1}
+
+	#ifdef __cplusplus
+	} /* end extern C */
+	#endif
+
+snippet prg
+	#pragma
+
+snippet attr
+	__attribute__((${1}))${2}
+
+snippet attrs
+	__attribute__((section("${1:section_name}")))${2}
+
+snippet unuse
+	__attribute__((unused))
+snippet fhead
+	/**
+	 * Desc: ${1}
+	 * Auth: ${2:张宇飞}
+	 * Date: `strftime("%Y-%m-%d")`    
+	 */
+	${3}
+snippet xhead
+	/********************************************************************
+
+	  @file		`Filename("$1.h")`
+	  @copyright	wanaka@copyright 2015
+
+	  @author	张宇飞(zhangyufei@xiaoyezi.com)
+
+	  @version	1.0
+
+	  @date		`strftime("%Y/%m/%d")`
+
+	  @brief	${1:简要描述}
+
+	  @detail	${2}
+	  *********************************************************************/
+	${3}
+snippet todo
+	todo(zhangyufei): ${1}
